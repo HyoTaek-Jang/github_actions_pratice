@@ -27,4 +27,17 @@ class DemoApplicationTests {
 		assertThat(result).isTrue();
 	}
 
+	@Test
+	@DisplayName("주어진 값이 10이 맞는지 확인 - 실패케이스")
+	void isNotTenTest() {
+		//given
+		int givenNumber = 8;
+
+		//when
+		NumberTest test = new NumberTest();
+		boolean result = test.isTen(givenNumber);
+
+		//then
+		assertThat(result).isTrue();
+	}
 }
